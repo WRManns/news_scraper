@@ -59,7 +59,7 @@ function htmlOutput(libOrCur){
   
 
 	var resultBody = document.createElement('div');
-    //resultBody.classList.add('card-body');
+    
     resultCard.append(resultBody);
 
    //           new api output
@@ -132,7 +132,7 @@ async function libFetch(){
 
 	while(count2++ < 1){
 		 
-	//	 alert("fetching");
+	
 		 //fetch code for recalling stored articles here
 		 
         document.getElementById("result-content").innerHTML = " ";
@@ -174,7 +174,7 @@ async function storeArticle () {
    
   
   
-  // Question: What does this code do??
+  // POST articles to user's saved article collumn
   if (newArticle) {
    	const response = await fetch('/api/search/', {
 		method: 'POST',
