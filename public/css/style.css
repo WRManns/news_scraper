@@ -17,3 +17,8 @@
 #searchBtn{
     border-radius: 10%;
 }
+
+#savedLinks {
+    font-weight: bold;
+    color: darkred;
+}

@@ -9,8 +9,8 @@
     {{#each saved_articles as |saved_article|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4>{{saved_article.id}}">{{saved_article.title}}</h4>
-        <h3>{{saved_article.urlnews}}</h3>
+        <h6>{{saved_article.id}}: {{saved_article.title}}</h6>
+        <a id= "savedLinks"style= "none" href="{{saved_article.urlnews}}">Link to Article</a>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{saved_article.id}}">DELETE</button>
