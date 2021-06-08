@@ -30,12 +30,18 @@ async function fetchArticles(event) {
   
 	
 	
-	const response = await fetch('https://newsapi.org/v2/everything?apiKey=29456d339c27420da1a26b28c5635f4b' + '&q=' + searchfieldEl.val(), {
-		method: 'GET'
-		
+	const response = await fetch('https://bing-news-search1.p.rapidapi.com/news/search?' + 'q=' + searchfieldEl.val() + '&safeSearch=Off&textFormat=Raw&freshness=Day&count=20', {
+		method: 'GET',
+		headers: {
+			'x-bingapis-sdk': "true",
+			'x-rapidapi-key': "83880f65f7mshad8dbb70fd491d8p1aad41jsn9100b230787d",
+			'x-rapidapi-host': "bing-news-search1.p.rapidapi.com"
+		}
 	  })
+	  
     data= await response.json();
 	console.log(data);
+
 htmlOutput(libOrCurrentNews);
 	    
 }
@@ -66,14 +72,14 @@ function htmlOutput(libOrCur){
 
 	var bodyContentEl = document.createElement('p');
 
- 	bodyContentEl.innerHTML = data.articles[i].title + '<br>' + '<br>' + data.articles[i].description;
+ 	bodyContentEl.innerHTML = data.value[i].name + '<br>' + '<br>' + data.value[i].description;
 	     
 	  resultBody.append( bodyContentEl);
        
 	
 	  linkButtonEl = document.createElement('a');
 	  linkButtonEl.textContent = 'Read More';
-	  linkButtonEl.setAttribute('href', data.articles[i].url);
+	  linkButtonEl.setAttribute('href', data.value[i].url);
 	  linkButtonEl.classList.add('btn', 'btn-dark');
 	  
 	 if(i==0){ 
@@ -161,13 +167,13 @@ async function storeArticle () {
    while(count++ < 1){
    var saveID = $( this ).attr("id");
    var saveIDInt=parseInt(saveID);
-   alert(data.articles[saveIDInt].url);
+   alert(data.value[saveIDInt].url);
    
    
    let newArticle = {
-	urlnews: data.articles[saveIDInt].url,
-	title: data.articles[saveIDInt].title,
-	description: data.articles[saveIDInt].description
+	urlnews: data.value[saveIDInt].url,
+	title: data.value[saveIDInt].name,
+	description: data.value[saveIDInt].description
    };
    console.log(newArticle);
 	
