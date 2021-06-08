@@ -7,7 +7,7 @@ const delButtonHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/stored_search');
+        document.location.replace('/search');
       } else {
         alert('Failed to delete project');
       }
