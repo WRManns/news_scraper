@@ -167,7 +167,7 @@ async function storeArticle () {
    while(count++ < 1){
    var saveID = $( this ).attr("id");
    var saveIDInt=parseInt(saveID);
-   alert(data.value[saveIDInt].url);
+   alert(data.value[saveIDInt].name);
    
    
    let newArticle = {
