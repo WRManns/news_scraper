@@ -1,0 +1,19 @@
+[
+  {
+    "urlnews": "www.test.com", 
+    "title": "Music Near Me",
+    "description": "example seed 1"
+  },
+  {
+    "urlnews": "www.test2.com", 
+    "title": "The Ultimate Tech Quiz",
+    "description": "example seed 2"
+   
+  },
+  {
+    "urlnews": "www.test3.com", 
+    "title": "Roll 'Em Up",
+    "description": "example seed 3"
+    
+  }
+]

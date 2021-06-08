@@ -1,0 +1,25 @@
+
+<form action="/">
+     <button id='return' class="btn-dark" type="submit" value="Return">Return to Search</button> 
+</form>
+{{#if saved_articles.length}}
+  <div class="col-md-6 search-list">
+    <h3>Saved Articles:</h3>
+<br>
+    {{#each saved_articles as |saved_article|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>{{saved_article.id}}">{{saved_article.title}}</h4>
+        <h3>{{saved_article.urlnews}}</h3>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{saved_article.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+
+<script src="./js/saved_articles.js"></script>

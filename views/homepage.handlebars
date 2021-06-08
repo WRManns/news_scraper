@@ -1,0 +1,30 @@
+ <nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex" id ="searchform" >
+      <input class="form-control me-2 "  name ="searchfield" type="search" placeholder="Search" aria-label="Search">
+      <button id= "searchBtn" class="btn-dark" type="submit">Search</button>
+    </form>
+  </div>
+   {{#if logged_in}}
+        <form action="/search">
+          <button id='storedSearch' class="btn-dark" type="submit" value="Saved Searches">Show Saved Articles</button> 
+        </form>
+        <button id="logout" class="btn-dark">Log Out</button>
+        {{else}}
+        <form action="/login">
+          <button id='login' class="btn-dark" type="submit" value="Log In">Log In</button> 
+        </form>
+      
+        {{/if}}
+</nav>
+ <div class="col-12 col-md-9 p-3 ">
+  <h6>Showing results for: <span id="result-text"></span></h6>
+   <div id="result-content"></div>
+       <div id="result-summary"></div>
+    
+  
+      {{#if logged_in}}
+      <script src="./js/logout.js"></script>
+      {{/if}}
+
+    <script src="./js/script.js"></script>

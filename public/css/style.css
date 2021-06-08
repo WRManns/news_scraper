@@ -1,0 +1,19 @@
+#storedSearch{
+    margin-left: 1rem;
+    
+}
+
+#login{
+    margin-left: 1rem;
+    
+}
+
+#logout{
+    margin-top: .1rem;
+    margin-left: 1rem;
+    
+}
+
+#searchBtn{
+    border-radius: 10%;
+}
