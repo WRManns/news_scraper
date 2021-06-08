@@ -1,5 +1,5 @@
 {
-  "name": "Project2_News",
+  "name": "news_scraper",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
