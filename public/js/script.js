@@ -61,7 +61,7 @@ function htmlOutput(libOrCur){
 	for(i=0;i<10;i++){
 	
 	var resultCard = document.createElement('div');
-	resultCard.classList.add('card', 'bg-light', 'text-dark', 'mb-3', 'p-3');
+	resultCard.classList.add('card', 'text-dark', 'mb-3', 'p-3');
   
 
 	var resultBody = document.createElement('div');

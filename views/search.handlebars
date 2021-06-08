@@ -2,14 +2,15 @@
 <form action="/">
      <button id='return' class="btn-dark" type="submit" value="Return">Return to Search</button> 
 </form>
+<br>
 {{#if saved_articles.length}}
   <div class="col-md-6 search-list">
-    <h3>Saved Articles:</h3>
+    <h3 class= "saveHead">Saved Articles:</h3>
 <br>
     {{#each saved_articles as |saved_article|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h6>{{saved_article.id}}: {{saved_article.title}}</h6>
+        <h6 class= "savedText">{{saved_article.id}}: {{saved_article.title}}</h6>
         <a id= "savedLinks"style= "none" href="{{saved_article.urlnews}}">Link to Article</a>
       </div>
       <div class="col-md-4">
