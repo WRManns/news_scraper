@@ -17,11 +17,12 @@
       
         {{/if}}
 </nav>
+{{#if logged_in}}
  <div class="col-12 col-md-9 p-3 ">
   <h6>Showing results for: <span id="result-text"></span></h6>
    <div id="result-content"></div>
        <div id="result-summary"></div>
-    
+ {{/if}}   
   
       {{#if logged_in}}
       <script src="./js/logout.js"></script>
